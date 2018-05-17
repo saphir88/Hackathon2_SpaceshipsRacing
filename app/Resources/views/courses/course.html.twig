@@ -18,15 +18,19 @@
             <div class="col-2">
                 <table class="table table-hover">
                     <tbody>
-                    {% for equipe in equipes %}
-                        {% for i in 0..5 %}
+
+
+
+                {% for i,equipe in equipes %}
+                    {% if i < 6 %}
                     <tr>
-                    <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
-                    <td>{{ equipe.imgSymbole }}</td>
+                    <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
                     <td>{{ equipe.nom }}</td>
                     </tr>
-                    {% endfor %}
-                    {% endfor %}
+                    {% endif%}
+                {% endfor%}
+
+
 
                     </tbody>
                 </table>
@@ -38,40 +42,24 @@
             <div class="offset-3 col-2">
                 <table class="table table-hover">
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+
+                    {% for i,equipe in randGroupe1 %}
+                        {% if i < 3 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
+                                <td></td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
+                    {% for i,equipe in randGroupe2 %}
+                        {% if i < 3 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
+                                <td></td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
+
                     </tbody>
                 </table>
 
@@ -125,40 +113,14 @@
             <div class="col-2">
                 <table class="table table-hover">
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                     {% for i,equipe in equipes %}
+                        {% if i > 5 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
+                                <td>{{ equipe.nom }}</td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
                     </tbody>
                 </table>
 
