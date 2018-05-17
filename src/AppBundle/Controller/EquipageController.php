@@ -26,7 +26,7 @@ class EquipageController extends Controller
 
         $equipages = $em->getRepository('AppBundle:Equipage')->findAll();
 
-        return $this->render('equipage/admin.html.twig', array(
+        return $this->render('equipage/index.html.twig', array(
             'equipages' => $equipages,
         ));
     }
