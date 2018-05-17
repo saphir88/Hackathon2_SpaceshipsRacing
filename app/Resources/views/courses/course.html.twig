@@ -18,40 +18,16 @@
             <div class="col-2">
                 <table class="table table-hover">
                     <tbody>
+                    {% for equipe in equipes %}
+                        {% for i in 0..5 %}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
+                    <td>{{ equipe.imgSymbole }}</td>
+                    <td>{{ equipe.nom }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+
                     </tbody>
                 </table>
 
@@ -103,7 +79,8 @@
 
             <!-- Jour 3-->
             <div class="offset-1 col-2">
-                <table id="tablejour3" class="table table-hover">
+                <div id="tablejour3">
+                <table class="table table-hover">
                     <tbody>
                     <tr>
                         <th scope="row">1</th>
@@ -121,6 +98,21 @@
                         <th scope="row">3</th>
                         <td colspan="2">Larry the Bird</td>
                         <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            </div>
+            <!-- Gagnant-->
+            <div class="offset-1 col-2">
+                <table id="gagnant" class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>gagne</td>
                     </tr>
                     </tbody>
                 </table>
@@ -194,11 +186,15 @@
 
             border: solid 1px gray;
         }
-        #tablejour3 {
+        #tablejour3
+        {
 
-            vertical-align: 50%;
-
-
+            margin-top: 30%
+            ;vertical-align: 50%;
+        }
+        #gagnant
+        {
+            margin-top: 50%
         }
 
     </style>
