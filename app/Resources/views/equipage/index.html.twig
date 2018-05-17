@@ -1,23 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Equipages list</h1>
-
-    <table>
+    <h1>Les membres d'équipage</h1>
+    <table class="table table-striped table-dark">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Photo</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for equipage in equipages %}
             <tr>
                 <td><a href="{{ path('equipage_show', { 'id': equipage.id }) }}">{{ equipage.id }}</a></td>
                 <td>{{ equipage.nom }}</td>
-                <td>{{ equipage.photo }}</td>
+                <td><img src="{{ equipage.photo }}" class="img-fluid" alt="Responsive image"></td>
                 <td>
                     <ul>
                         <li>
@@ -32,10 +31,7 @@
         {% endfor %}
         </tbody>
     </table>
+    <a class="btn btn-primary" href="{{ path('equipage_new') }}" >Ajouter un membre d'équipage</a>
+    <a class="btn btn-danger" href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('equipage_new') }}">Create a new equipage</a>
-        </li>
-    </ul>
 {% endblock %}
