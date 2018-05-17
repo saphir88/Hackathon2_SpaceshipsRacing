@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Circuits</title>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Circuts</h1>
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>Ceinture de Kuiper</h3>
+                    <a href="#" class="thumbnail">
+                        <img class=img-responsive src="http://www.astropleiades.fr/medias/images/ceintureKuiper.jpg"alt="" width="600">
+                    </a>
+                    <p>Description</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>Arc en ciel</h3>
+                    <a href="#">
+                        <img class=img-responsive src="https://gamewave.fr/static/images/news/headers/04324-bloggif_59d163a37b847.jpeg"alt="" width="600">
+                    </a>
+                    <p>Description</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>Nebuleuse</h3>
+                    <a href="#" class="thumbnail">
+                        <img class=img-responsive src="https://blogs.futura-sciences.com/feldmann/wp-content/uploads/sites/9/2015/10/eso-672x372.jpg"alt="" width="600">
+                    </a>
+                    <p>Description</p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    </body>
+    </html>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+
+        h1
+        {
+            text-align: center;
+        }
+        .jumbotron
+        {
+            text-align: center;
+        }
+        img {
+
+            max-width : 100%;
+            heigth: auto;
+
+
+        }
+
+    </style>
+{% endblock %}
