@@ -2,32 +2,32 @@
 
 {% block body %}
 
-
-
-
 <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
             <h1 class="titre">Star Ship Racing</h1>
         </div>
     </div>
+    <div class="row">
+        <div class="col-5 offset-4 ">
+            <a style="color: #12ff00;display:inline-block; "  class="nav-link" href="#">Accueil</a>
+            <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/circuit">Circuit</a>
+            <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/course">Match</a>
+        </div>
+    </div>
 </div>
-<div style="">
-    <a  class="nav-link" href="#">Accueil</a>
-    <a style="color: #12ff00;display:inline-block;" class="nav-link" href="#">Circuit</a>
-    <a style="color: #12ff00;display:inline-block;" class="nav-link" href="#">Match</a>
-</div>
+
 <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
-            <h2 class="titre">description du tournoi</h2>
+            <h2 class="titre">Description du tournoi</h2>
         </div>
     </div>
 </div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-10 offset-1">
-            <p class="description">paragraphe <br> paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br>paragraphe <br></p>
+            <p class="description">Une course effrener des meilleurs vaisseau de l'univers qui ce deroule en 3 round:<br> <br> -Le premier round ce passe dans la ceinture de Kruiper! <br>Les deux groupe se lanceront en même temps en sens inverse et devront passer par 12 checkpoints.<br> <br> -Le deuxieme round prendra les 3 équipes survivantes de chaque groupes et iront ce disputer sur le circuit<br> Arc-En-Ciel.<br> <br> -Les trois meilleurs équipes iront disputer la finale dans la Nebuleuse.</p>
 
         </div>
     </div>
@@ -80,8 +80,10 @@
                     color: #15ff00;
                 }
                 .nav-link{
-                    color: #12ff00;
-                    display:inline-block;
+                    text-align: center;
+                    border: 1px solid white;
+                    background-color: rgba(138,138,138, 0.3);
+                    margin-left: 20px;
                 }
                 .col-2{
                     background-color: rgba(138,138,138, 0.3);
@@ -129,10 +131,14 @@
 
                 }
                 .description{
-                    color: #15ff00;
+                    font-size: 40px;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    color: #12ff00;
                     border: 1px solid white;
                     text-align: center;
                     background-color: rgba(138,138,138, 0.3);
+                    font-family: 'Orbitron', sans-serif;
                 }
                 .descriptionEquipe{
                     border: 1px solid black;
@@ -142,6 +148,8 @@
                     margin-bottom: 20px;
                 }
                 .titre{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     color: #15ff00;
                     font-family: 'Orbitron', sans-serif;
                 }
