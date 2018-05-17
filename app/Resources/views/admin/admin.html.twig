@@ -1,5 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-page admin
+    <div class="container">
+        <center>
+            <div class="col-sm">
+                <a class="btn btn-primary" href="/equipage" role="button">Gestion des membres d'Equipage</a>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm">
+                <a class="btn btn-primary" href="/equipe" role="button">Gestion des Equipes</a>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm">
+                <a class="btn btn-danger" href="{{ path('logout') }}" role="button">Deconnexion</a>
+            </div>
+        </center>
+    </div>
+
 {% endblock %}
