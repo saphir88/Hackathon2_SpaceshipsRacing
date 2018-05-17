@@ -8,22 +8,22 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Circuit controller.
+ * Course controller.
  *
- * @Route("circuit")
+ * @Route("course")
  */
-class CircuitController extends Controller
+class CourseController extends Controller
 {
     /**
-     * Lists all circuits.
+     * Lists all courses.
      *
-     * @Route("/", name="circuit")
+     * @Route("/", name="course")
      * @Method("GET")
      */
-    public function circuitAction()
+    public function courseAction()
     {
 
-        return $this->render('circuit/circuit.html.twig');
+        return $this->render('courses/course.html.twig');
     }
 
 }
