@@ -22,8 +22,12 @@ class CourseController extends Controller
      */
     public function courseAction()
     {
+        $em = $this->getDoctrine()->getManager();
 
-        return $this->render('courses/course.html.twig');
+        $equipes = $em->getRepository('AppBundle:Equipe')->findAll();
+
+
+        return $this->render('courses/course.html.twig',array('equipes' => $equipes,));
     }
 
 }
