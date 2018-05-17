@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Photo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipage in equipages %}
+            <tr>
+                <td><a href="{{ path('equipage_show', { 'id': equipage.id }) }}">{{ equipage.id }}</a></td>
+                <td>{{ equipage.nom }}</td>
+                <td>{{ equipage.photo }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipage_show', { 'id': equipage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipage_edit', { 'id': equipage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipage_new') }}">Create a new equipage</a>
+        </li>
+    </ul>
+{% endblock %}

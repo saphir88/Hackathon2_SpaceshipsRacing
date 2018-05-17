@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Imgsymbole</th>
+                <th>Imgvaisseau</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipe in equipes %}
+            <tr>
+                <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
+                <td>{{ equipe.nom }}</td>
+                <td>{{ equipe.imgSymbole }}</td>
+                <td>{{ equipe.imgVaisseau }}</td>
+                <td>{{ equipe.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipe_show', { 'id': equipe.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipe_new') }}">Create a new equipe</a>
+        </li>
+    </ul>
+{% endblock %}
