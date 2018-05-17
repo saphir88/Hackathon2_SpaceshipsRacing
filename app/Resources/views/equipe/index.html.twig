@@ -1,26 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Equipes list</h1>
-
-    <table>
+    <h1>Liste des Equipes</h1>
+    <table class="table table-striped table-dark">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Imgsymbole</th>
-                <th>Imgvaisseau</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Symbole</th>
+            <th scope="col">Vaisseau</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for equipe in equipes %}
             <tr>
                 <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
                 <td>{{ equipe.nom }}</td>
-                <td>{{ equipe.imgSymbole }}</td>
-                <td>{{ equipe.imgVaisseau }}</td>
+                <td><img src="{{ equipe.imgSymbole }}" class="img-fluid" alt="Responsive image"></td>
+                <td><img src="{{ equipe.imgVaisseau }}" class="img-fluid" alt="Responsive image"></td>
                 <td>{{ equipe.description }}</td>
                 <td>
                     <ul>
@@ -36,10 +35,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('equipe_new') }}">Create a new equipe</a>
-        </li>
-    </ul>
+    <a class="btn btn-danger" href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
 {% endblock %}

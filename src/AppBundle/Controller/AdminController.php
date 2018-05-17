@@ -18,7 +18,7 @@ class AdminController extends Controller
     /**
      * Page admin
      *
-     * @Route("/", name="admin_page")
+     * @Route("/", name="admin")
      * @Method("GET")
      */
     public function admin()
@@ -26,9 +26,8 @@ class AdminController extends Controller
         if(isset($_SESSION['username'])) {
             return $this->render('admin/admin.html.twig');
         }else{
-            header('location:/admin/login');
+            return $this->redirectToRoute('login');
         }
-
     }
 
     /**
@@ -43,6 +42,18 @@ class AdminController extends Controller
     }
 
     /**
+     * Page logout
+     *
+     * @Route("/logout", name="logout")
+     * @Method("GET")
+     */
+    public function logout()
+    {
+        session_destroy();
+        return $this->redirectToRoute('login');
+    }
+
+    /**
      * Page postlogin
      *
      * @Route("/postlogin", name="postlogin")
@@ -53,12 +64,10 @@ class AdminController extends Controller
         $myMdp = 'admin';
 
         if(isset($_POST['username']) && isset($_POST['password'])) {
-            $pseudo = $_POST['username'];
-            $mdp = $_POST['password'];
-            if ($pseudo == $myPseudo && $mdp == $myMdp){
-                $_SESSION['username'] = $pseudo;
-                var_dump($_SESSION);
-                return $this->redirectToRoute('http://symfony.com/doc');
+            if ($_POST['username'] == $myPseudo && $_POST['password'] == $myMdp){
+                session_start();
+                $_SESSION['username'] = "admin";
+                return $this->redirectToRoute('admin');
             } else {
                 $this->errors[] = "Identifiant ou mot de passe invalide";
                 return $this->render("admin/login.html.twig", ['errors' => $this->errors,]);

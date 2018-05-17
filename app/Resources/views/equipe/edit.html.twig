@@ -8,14 +8,6 @@
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('equipe_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a class="btn btn-primary" href="{{ path('equipe_index') }}" role="button">Retour à la gestion des équipes</a>
+
 {% endblock %}

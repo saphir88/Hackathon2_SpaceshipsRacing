@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 logo">
                 <div class="wrapper">
-                    <form class="form-signin" action="/admin/postlogin" method="POST">
+                    <form class="form-signin" action="{{ path('postlogin') }}" method="POST">
                         <h2 class="form-signin-heading">Administration</h2>
                         <input type="text" class="form-control" name="username" placeholder="Pseudo" required=""/>
                         <input type="password" class="form-control" name="password" placeholder="********" required=""/>
