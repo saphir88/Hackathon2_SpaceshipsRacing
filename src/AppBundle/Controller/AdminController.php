@@ -65,7 +65,6 @@ class AdminController extends Controller
 
         if(isset($_POST['username']) && isset($_POST['password'])) {
             if ($_POST['username'] == $myPseudo && $_POST['password'] == $myMdp){
-                session_start();
                 $_SESSION['username'] = "admin";
                 return $this->redirectToRoute('admin');
             } else {

@@ -1,12 +1,66 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Equipage edit</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h2 class="titre">Equipage edittion</h2>
+                <a class="btn" href="{{ path('equipage_index') }}">Retour à L'équipage</a>
+                <a class="btn " href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
+            </div>
+        </div>
+    </div>
 
+<div class="container">
+        <div class="row">
+            <div class="col-3 offset-4 test">
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
-
-    <a class="btn btn-primary" href="{{ path('equipage_index') }}" role="button">Retour à la gestion des membres d'équipage</a>
+            </div>
+        </div>
+</div>
 {% endblock %}
+  {% block stylesheets %}
+      <style>
+
+          body{
+              background: url("https://wallpaperlayer.com/img/2015/7/outer-space-wallpaper-5236-5481-hd-wallpapers.jpg");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+          }
+
+          .titre{
+              color: greenyellow;
+              font-family: 'Orbitron', sans-serif;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              margin-bottom: 30px;
+              margin-top: 30px;
+          }
+          h2
+          {
+              border: 1px solid black;
+              background-color: rgba(0,0,0, 0.7);
+              text-align: center;
+
+          }
+          .btn{
+              border: 1px solid black;
+              background-color: rgba(0,0,0,0.98);
+              text-align: center;
+              margin-bottom: 30px;
+              margin-top: 20px;
+          }
+          .test{
+              border: 1px solid black;
+              background-color: rgba(138,138,138, 0.7);
+              margin-top:100px;
+              padding-bottom: 20px;
+              padding-top: 20px;
+          }
+
+
+      </style>
+  {% endblock %}

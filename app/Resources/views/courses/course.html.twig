@@ -11,8 +11,26 @@
         <title>Courses</title>
     </head>
     <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h1 class="titre">Star Ship Racing</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 offset-4 ">
+                <a style="color: #12ff00;display:inline-block; "  class="nav-link" href="/">Accueil</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/circuit">Circuit</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/course">Match</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Courses</h1>
+    </div>
     <div class="container-fluid">
-        <h1>Courses</h1>
+
         <!-- Jour 1 -->
         <div class="row">
             <div class="col-2">
@@ -179,14 +197,44 @@
 
     </body>
     </html>
-
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 offset-3">
+                    <p class="footer">Site développer par Thomas,Cyril,Illya et Axel <a href="/admin/login">Admin</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
 
 {% block stylesheets %}
     <style>
 
+        body{
+            background: url("https://wallpaperlayer.com/img/2015/7/outer-space-wallpaper-5236-5481-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .nav-link{
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .titre{
+            color: greenyellow;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
         h1
         {
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
             text-align: center;
         }
         .table-hover
@@ -195,10 +243,11 @@
             border: solid 1px gray;
         }
         #tablejour3 {
-
             vertical-align: 50%;
-
-
+        }
+        .footer{
+            text-align: center;
+            color: dodgerblue;
         }
 
     </style>

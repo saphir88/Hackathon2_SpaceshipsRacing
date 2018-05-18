@@ -33,7 +33,7 @@
 <div class="container-fluid equipe">
     <div class="row">
         {% for equipe in equipes %}
-            <div class="col-2 ">
+            <div class="col-3 ">
                 <div class="test">
                     <img style="height: 140px; width: 140px;" src="{{ equipe.imgSymbole }}"><br>
                     <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#{{ equipe.nom }}">{{ equipe.nom }}</button>
@@ -60,7 +60,7 @@
                                     </div>
 
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    
+
                                 </div>
 
 
@@ -69,8 +69,17 @@
                     </div>
                 </div>
             </div>
-        {% endfor %}
 
+        {% endfor %}
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 offset-7">
+                        <p class="footer">Site développer par Thomas,Cyril,Illya et Axel <a href="/admin/login">Admin</a> </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         {% endblock %}
 
         {% block stylesheets %}
@@ -170,15 +179,17 @@
                 .modal-body{
                     background-color: black;
                 }
-                .modal-footer{
-                    background-color: black;
-                }
+
                 .modal-content{
                     background-color: black;
                 }
 
                 .btn{
                     margin-bottom: 10px;
+                }
+                .footer{
+                    text-align: center;
+                    color: dodgerblue;
                 }
             </style>
         {% endblock %}
