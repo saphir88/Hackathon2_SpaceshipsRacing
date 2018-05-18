@@ -12,70 +12,128 @@
     </head>
     <body>
     <div class="container">
-        <h1>Circuts</h1>
         <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h3>Ceinture de Kuiper</h3>
-                    <a href="#" class="thumbnail">
-                        <img class=img-responsive src="http://www.astropleiades.fr/medias/images/ceintureKuiper.jpg"alt="" width="600">
-                    </a>
-                    <p>Description</p>
-
-                </div>
+            <div class="col-6 offset-3">
+                <h1 class="titre">Star Ship Racing</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h3>Arc en ciel</h3>
-                    <a href="#">
-                        <img class=img-responsive src="https://gamewave.fr/static/images/news/headers/04324-bloggif_59d163a37b847.jpeg"alt="" width="600">
-                    </a>
-                    <p>Description</p>
-
-                </div>
+            <div class="col-5 offset-4 ">
+                <a style="color: #12ff00;display:inline-block; "  class="nav-link" href="/">Accueil</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/circuit">Circuit</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/course">Match</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h3>Nebuleuse</h3>
-                    <a href="#" class="thumbnail">
-                        <img class=img-responsive src="https://blogs.futura-sciences.com/feldmann/wp-content/uploads/sites/9/2015/10/eso-672x372.jpg"alt="" width="600">
-                    </a>
-                    <p>Description</p>
-                    
-                </div>
-            </div>
-        </div>
-
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-4">
+                <h1 class="titre">Circuits</h1>
+            </div>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="circuit">
+                        <h3  class="titre">Ceinture de Kuiper</h3>
 
+                        <img class=img-responsive src="http://www.astropleiades.fr/medias/images/ceintureKuiper.jpg"alt="" width="600">
+
+                        <p class="description">Description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="circuit">
+                        <h3 class="titre">Arc en ciel</h3>
+
+                        <img class=img-responsive src="https://gamewave.fr/static/images/news/headers/04324-bloggif_59d163a37b847.jpeg"alt="" width="600">
+
+                        <p class="description">Description</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="circuit ">
+                        <h3 class="titre">Nebuleuse</h3>
+
+                        <img class=img-responsive src="https://blogs.futura-sciences.com/feldmann/wp-content/uploads/sites/9/2015/10/eso-672x372.jpg"alt="" width="600">
+                        <p class="description">Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
     </html>
-
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 offset-3">
+                    <p class="footer">Site développer par Thomas,Cyril,Illya et Axel <a href="/admin/login">Admin</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
 
 {% block stylesheets %}
     <style>
+        body{
+            background: url("https://wallpaperlayer.com/img/2015/7/outer-space-wallpaper-5236-5481-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .circuit{
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            text-align: center;
+        }
+        .nav-link{
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            margin-left: 20px;
+        }
+        .row{
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+        .description{
 
-        h1
-        {
-            text-align: center;
+            padding-top: 20px;
+            font-family: 'Orbitron', sans-serif;
+            color: dodgerblue;
         }
-        .jumbotron
-        {
+        h1{
+            font-family: 'Orbitron', sans-serif;
+            color: #15ff00;
             text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
         }
+        .titre{
+            color: greenyellow;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
         img {
 
             max-width : 100%;
             heigth: auto;
-
-
+            border-radius: 50%;
+        }
+        .footer{
+            text-align: center;
+            color: dodgerblue;
         }
 
     </style>

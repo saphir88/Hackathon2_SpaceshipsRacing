@@ -11,47 +11,45 @@
         <title>Courses</title>
     </head>
     <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h1 class="titre">Star Ship Racing</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 offset-4 ">
+                <a style="color: #12ff00;display:inline-block; "  class="nav-link" href="/">Accueil</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/circuit">Circuit</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/course">Match</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Courses</h1>
+    </div>
     <div class="container-fluid">
-        <h1>Courses</h1>
+
         <!-- Jour 1 -->
         <div class="row">
             <div class="col-2">
                 <table class="table table-hover">
                     <tbody>
+
+
+
+                {% for i,equipe in equipes %}
+                    {% if i < 6 %}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
+                    <td>{{ equipe.nom }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {% endif%}
+                {% endfor%}
+
+
+
                     </tbody>
                 </table>
 
@@ -62,40 +60,24 @@
             <div class="offset-3 col-2">
                 <table class="table table-hover">
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+
+                    {% for i,equipe in randGroupe1 %}
+                        {% if i < 3 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
+                                <td></td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
+                    {% for i,equipe in randGroupe2 %}
+                        {% if i < 3 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
+                                <td></td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
+
                     </tbody>
                 </table>
 
@@ -103,34 +85,7 @@
 
             <!-- Jour 3-->
             <div class="offset-1 col-2">
-                <table id="tablejour3" class="table table-hover">
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-
-        <!-- Jour 1 -->
-        <div class="row">
-            <div class="col-2">
+                <div id="tablejour3">
                 <table class="table table-hover">
                     <tbody>
                     <tr>
@@ -150,23 +105,40 @@
                         <td colspan="2">Larry the Bird</td>
                         <td>@twitter</td>
                     </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            </div>
+            <!-- Gagnant-->
+            <div class="offset-1 col-2">
+                <table id="gagnant" class="table table-hover">
+                    <tbody>
                     <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="row">1</th>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>gagne</td>
                     </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- Jour 1 -->
+        <div class="row">
+            <div class="col-2">
+                <table class="table table-hover">
+                    <tbody>
+                     {% for i,equipe in equipes %}
+                        {% if i > 5 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
+                                <td>{{ equipe.nom }}</td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
                     </tbody>
                 </table>
 
@@ -179,14 +151,44 @@
 
     </body>
     </html>
-
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 offset-3">
+                    <p class="footer">Site développer par Thomas,Cyril,Illya et Axel <a href="/admin/login">Admin</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
 
 {% block stylesheets %}
     <style>
 
+        body{
+            background: url("https://wallpaperlayer.com/img/2015/7/outer-space-wallpaper-5236-5481-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .nav-link{
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .titre{
+            color: greenyellow;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
         h1
         {
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
             text-align: center;
         }
         .table-hover
@@ -195,10 +197,15 @@
             border: solid 1px gray;
         }
         #tablejour3 {
-
             vertical-align: 50%;
-
-
+        }
+        .footer{
+            text-align: center;
+            color: dodgerblue;
+        }
+        #gagnant
+        {
+            margin-top: 50%
         }
 
     </style>

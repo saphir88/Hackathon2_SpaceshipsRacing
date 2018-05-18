@@ -1,5 +1,70 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-page admin
+    <div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2 class="titre">Star Ship Racing</h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+           <div class="container ">
+           <div class="row ">
+              <div class="col-6 offset-3 test">
+                 <div class="col-4 offset-3">
+                    <a class="btn offset-1 " href="/equipage" role="button">Gestion d'Equipage</a>
+                    <a class="btn offset-2" href="/equipe" role="button">Gestion Equipes</a>
+                    <br>
+                    <a class="btn offset-3" href="{{ path('logout') }}" role="button">Deconnexion</a>
+                </div>
+              </div>
+           </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+{% endblock %}
+        {% block stylesheets %}
+    <style>
+
+        body{
+            background: url("https://wallpaperlayer.com/img/2015/7/outer-space-wallpaper-5236-5481-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .titre{
+            color: greenyellow;
+            font-family: 'Orbitron', sans-serif;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        h2
+        {
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            text-align: center;
+
+        }
+        .btn{
+            border: 1px solid black;
+            background-color: rgba(0,0,0,0.98);
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .test{
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            margin-top:200px;
+        }
+
+
+    </style>
 {% endblock %}
