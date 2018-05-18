@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-
-
+<pre>
+{{  dump(equipes) }}
+</pre>
 
 <div class="container">
     <div class="row">
@@ -37,40 +37,402 @@
 
 <div class="container-fluid equipe">
     <div class="row">
-        {% for equipe in equipes %}
 
-            <div class="col-2 ">
-                <div class="test">
-                    <img style="height: 140px; width: 140px;" src="{{ equipe.imgSymbole }}"><br>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipe.nom }}">{{ equipe.nom }}</button>
-                    <div class="modal fade" id="{{ equipe.nom }}" role="dialog">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <h3 class="titre"> {{ equipe.nom }}</h3>
-                                    <div class="logo">
-                                        <img style="height: 140px; width: 140px;" src="{{ equipe.imgSymbole }}">
-                                        <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipe.imgVaisseau }}"><br>
+
+
+                <div class="col-2 ">
+                    <div class="test">
+                        <img style="height: 140px; width: 140px;" src="{{ equipes.0.imgSymbole }}"><br>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.0.team }}">{{ equipes.0.team }}</button>
+                        <div class="modal fade" id="{{ equipes.0.team }}" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h3 class="titre"> {{ equipes.0.team }}</h3>
+                                        <div class="logo">
+                                            <img style="height: 140px; width: 140px;" src="{{ equipes.0.imgSymbole }}">
+                                            <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.0.imgVaisseau }}"><br>
+                                        </div>
+                                        <p class="descriptionEquipe">{{ equipes.0.description }}</p>
+
+                                        <div class="photoEquipage">
+                                            <img style="width: 140px; height: 140px;" src="{{ equipes.0.photo }}">
+                                            <img style="width: 140px; height: 140px;" src="{{ equipes.1.photo }}">
+                                            <img style="width: 140px; height: 140px;" src="{{ equipes.2.photo }}">
+                                            <img style="width: 140px; height: 140px;" src="{{ equipes.3.photo }}">
+
+                                        </div>
+
                                     </div>
-                                    <p class="descriptionEquipe">{{ equipe.description }}</p>
 
-                                    <div class="photoEquipage">
-                                        <img style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
-                                        <img class="photoIndiv" style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
-                                        <img class="photoIndiv" style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
-                                        <img class="photoIndiv" style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+        <!-- Equipe 2 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.4.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.4.team }}">{{ equipes.4.team }}</button>
+                <div class="modal fade" id="{{ equipes.4.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.4.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.4.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.4.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.4.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.4.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.5.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.6.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        {% endfor %}
+        </div>
+        <!--Equipe 3 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.7.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.7.team }}">{{ equipes.7.team }}</button>
+                <div class="modal fade" id="{{ equipes.7.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.7.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.7.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.7.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.7.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.7.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.8.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Equipe 4 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.9.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.9.team }}">{{ equipes.9.team }}</button>
+                <div class="modal fade" id="{{ equipes.9.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.9.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.9.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.9.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.9.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.9.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.10.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.11.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.12.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Equipe 5 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.13.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.13.team }}">{{ equipes.13.team }}</button>
+                <div class="modal fade" id="{{ equipes.13.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.13.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.13.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.13.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.13.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.13.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.14.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.15.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.16.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Equipe 6 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.17.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.17.team }}">{{ equipes.17.team }}</button>
+                <div class="modal fade" id="{{ equipes.17.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.17.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.17.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.17.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.17.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.17.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.18.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Equipe 7 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.19.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.19.team }}">{{ equipes.19.team }}</button>
+                <div class="modal fade" id="{{ equipes.19.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.19.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.19.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.19.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.19.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.19.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.20.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.21.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.22.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Equipe 8 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.23.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.23.team }}">{{ equipes.23.team }}</button>
+                <div class="modal fade" id="{{ equipes.23.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.23.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.23.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.23.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.23.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.23.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Equipe 9 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.24.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.24.team }}">{{ equipes.24.team }}</button>
+                <div class="modal fade" id="{{ equipes.24.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.24.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.24.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.24.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.24.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.24.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.25.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.26.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.27.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Equipe 10 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.28.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.28.team }}">{{ equipes.28.team }}</button>
+                <div class="modal fade" id="{{ equipes.28.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.28.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.28.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.28.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.28.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.28.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Equipe 11 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.29.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.29.team }}">{{ equipes.29.team }}</button>
+                <div class="modal fade" id="{{ equipes.29.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.29.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.29.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.29.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.29.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.29.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.30.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.31.photo }}">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.32.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Equipe 12 -->
+        <div class="col-2 ">
+            <div class="test">
+                <img style="height: 140px; width: 140px;" src="{{ equipes.33.imgSymbole }}"><br>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ equipes.33.team }}">{{ equipes.33.team }}</button>
+                <div class="modal fade" id="{{ equipes.33.team }}" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="titre"> {{ equipes.33.team }}</h3>
+                                <div class="logo">
+                                    <img style="height: 140px; width: 140px;" src="{{ equipes.33.imgSymbole }}">
+                                    <img class="photoIndiv" style="width: 140px; height: 140px;" src="{{ equipes.33.imgVaisseau }}"><br>
+                                </div>
+                                <p class="descriptionEquipe">{{ equipes.33.description }}</p>
+
+                                <div class="photoEquipage">
+                                    <img style="width: 140px; height: 140px;" src="{{ equipes.33.photo }}">
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% endblock %}
 
