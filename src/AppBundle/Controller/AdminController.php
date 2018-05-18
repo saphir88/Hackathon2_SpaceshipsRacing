@@ -50,7 +50,7 @@ class AdminController extends Controller
     public function logout()
     {
         session_destroy();
-        return $this->redirectToRoute('login');
+        return $this->redirectToRoute('homepage');
     }
 
     /**
