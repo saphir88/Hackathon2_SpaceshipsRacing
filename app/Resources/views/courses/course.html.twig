@@ -36,9 +36,6 @@
             <div class="col-2">
                 <table class="table table-hover">
                     <tbody>
-
-
-
                 {% for i,equipe in equipes %}
                     {% if i < 6 %}
                     <tr>
@@ -47,9 +44,6 @@
                     </tr>
                     {% endif%}
                 {% endfor%}
-
-
-
                     </tbody>
                 </table>
 
@@ -60,24 +54,30 @@
             <div class="offset-3 col-2">
                 <table class="table table-hover">
                     <tbody>
-
-                    {% for i,equipe in randGroupe1 %}
-                        {% if i < 3 %}
                             <tr>
-                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
-                                <td></td>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.0.imgSymbole }}"><br></td>
+                                <td>{{ equipes.0.nom }}</td>
                             </tr>
-                        {% endif%}
-                    {% endfor%}
-                    {% for i,equipe in randGroupe2 %}
-                        {% if i < 3 %}
                             <tr>
-                                <td><img style="height: 20px; width: 20px;" src=""><br></td>
-                                <td></td>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.4.imgSymbole }}"><br></td>
+                                <td>{{ equipes.4.nom }}</td>
                             </tr>
-                        {% endif%}
-                    {% endfor%}
-
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                                <td>{{ equipes.5.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.7.imgSymbole }}"><br></td>
+                                <td>{{ equipes.7.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.9.imgSymbole }}"><br></td>
+                                <td>{{ equipes.9.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.11.imgSymbole }}"><br></td>
+                                <td>{{ equipes.11.nom }}</td>
+                            </tr>
                     </tbody>
                 </table>
 
@@ -85,29 +85,24 @@
 
             <!-- Jour 3-->
             <div class="offset-1 col-2">
-                <div id="tablejour3">
-                <table class="table table-hover">
+
+                <table id="tablejour3" class="table table-hover">
                     <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.0.imgSymbole }}"></td>
+                        <td>{{ equipes.0.nom }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                        <td>{{ equipes.5.nom }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.7.imgSymbole }}"><br></td>
+                        <td>{{ equipes.7.nom }}</td>
                     </tr>
                     </tbody>
                 </table>
-                </div>
+
 
             </div>
             <!-- Gagnant-->
@@ -115,10 +110,8 @@
                 <table id="gagnant" class="table table-hover">
                     <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Oui</td>
-                        <td>Oui</td>
-                        <td>gagne</td>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                        <td>{{ equipes.5.nom }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -160,6 +153,7 @@
             </div>
         </div>
     </footer>
+    
 {% endblock %}
 
 {% block stylesheets %}
@@ -195,16 +189,30 @@
         {
 
             border: solid 1px gray;
+            color: dodgerblue;
+
+
         }
-        #tablejour3 {
-            vertical-align: 50%;
+
+        td
+        {
+            border: 1px solid white;
+            background-color: rgba(0,0,0, 0.7);
         }
-        .footer{
+
+        #tablejour3
+        {
+            margin-top: 30%
+
+        }
+        .footer
+        {
             text-align: center;
             color: dodgerblue;
         }
         #gagnant
         {
+
             margin-top: 50%
         }
 
