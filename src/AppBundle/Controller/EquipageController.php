@@ -26,13 +26,9 @@ class EquipageController extends Controller
 
         $equipages = $em->getRepository('AppBundle:Equipage')->findAll();
 
-        if(isset($_SESSION['username'])) {
-            return $this->render('equipage/index.html.twig', array(
-                'equipages' => $equipages,
-            ));
-        }else{
-            return $this->redirectToRoute('login');
-        }
+        return $this->render('equipage/index.html.twig', array(
+            'equipages' => $equipages,
+        ));
     }
 
     /**

@@ -13,7 +13,7 @@ class EquipeRepository extends \Doctrine\ORM\EntityRepository
 
     public function getAllInfo()
     {
-        $requeteSql = "SELECT equipe.nom, equipe.imgSymbole, equipe.imgVaisseau, equipe.description, crew.nom as team, crew.photo FROM equipe RIGHT JOIN equipage AS crew ON equipe.id=crew.id_equipe_id";
+        $requeteSql = "SELECT equipe.nom, equipe.img_symbole, equipe.img_vaisseau, equipe.description, crew.nom as team, crew.photo FROM equipe RIGHT JOIN equipage AS crew ON equipe.id=crew.id_equipe_id";
 
         $All = $this->getEntityManager()->getConnection()->prepare($requeteSql);
         $All->execute([]);

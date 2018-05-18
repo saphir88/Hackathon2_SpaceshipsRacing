@@ -3,26 +3,26 @@
 {% block body %}
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-6 offset-3">
-            <h2 class="titre">Equipe edit</h2>
-            <a class="btn" href="/equipe">Retour à L'équipe</a>
-            <a class="btn " href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h2 class="titre">Equipe edit</h2>
+                <a class="btn" href="/equipe">Retour à L'équipe</a>
+                <a class="btn " href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-3 offset-4 test">
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-3 offset-4 test">
+                {{ form_start(edit_form) }}
+                {{ form_widget(edit_form) }}
+                <input type="submit" value="Edit" />
+                {{ form_end(edit_form) }}
+            </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
  {% block stylesheets %}

@@ -11,32 +11,32 @@
         </div>
     </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-3 offset-4 test">
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ equipage.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ equipage.nom }}</td>
-            </tr>
-            <tr>
-                <th>Photo</th>
-                <td>{{ equipage.photo }}</td>
-            </tr>
-        </tbody>
-    </table>
-            <a style="color:red;" href="{{ path('equipage_edit', { 'id': equipage.id }) }}">Edit</a>
-            {{ form_start(delete_form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-3 offset-4 test">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ equipage.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ equipage.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Photo</th>
+                        <td>{{ equipage.photo }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a style="color:red;" href="{{ path('equipage_edit', { 'id': equipage.id }) }}">Edit</a>
+                {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+                {{ form_end(delete_form) }}
+            </div>
         </div>
-    </div>
-</div
+    </div
 {% endblock %}
    {% block stylesheets %}
        <style>

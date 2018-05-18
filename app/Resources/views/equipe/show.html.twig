@@ -11,40 +11,40 @@
         </div>
     </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-6 offset-3 test">
-    <table>
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ equipe.id }}</td>
-        </tr>
-        <tr>
-            <th>Nom</th>
-            <td>{{ equipe.nom }}</td>
-        </tr>
-        <tr>
-            <th>Imgsymbole</th>
-            <td>{{ equipe.imgSymbole }}</td>
-        </tr>
-        <tr>
-            <th>Imgvaisseau</th>
-            <td>{{ equipe.imgVaisseau }}</td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td>{{ equipe.description }}</td>
-        </tr>
-        </tbody>
-    </table>
-    <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">Edit</a>
-    {{ form_start(delete_form) }}
-    <input type="submit" value="Delete">
-    {{ form_end(delete_form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3 test">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ equipe.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ equipe.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Imgsymbole</th>
+                        <td>{{ equipe.imgSymbole }}</td>
+                    </tr>
+                    <tr>
+                        <th>Imgvaisseau</th>
+                        <td>{{ equipe.imgVaisseau }}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ equipe.description }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">Edit</a>
+                {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
 {% block stylesheets %}

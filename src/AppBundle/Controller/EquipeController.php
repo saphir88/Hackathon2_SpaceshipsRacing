@@ -26,14 +26,9 @@ class EquipeController extends Controller
 
         $equipes = $em->getRepository('AppBundle:Equipe')->findAll();
 
-        if(isset($_SESSION['username'])) {
-            return $this->render('equipe/index.html.twig', array(
-                'equipes' => $equipes,
-            ));
-        }else{
-            return $this->redirectToRoute('login');
-        }
-
+        return $this->render('equipe/index.html.twig', array(
+            'equipes' => $equipes,
+        ));
     }
 
     /**

@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
-        <div class="row">
-            <div class="col-6 offset-3">
-                <h2 class="titre">Equipage edittion</h2>
-                <a class="btn" href="{{ path('equipage_index') }}">Retour à L'équipage</a>
-                <a class="btn " href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2 class="titre">Equipage edittion</h2>
+            <a class="btn" href="{{ path('equipage_index') }}">Retour à L'équipage</a>
+            <a class="btn " href="{{ path('admin') }}" role="button">Retour au menu d'administration</a>
         </div>
     </div>
+</div>
 
 <div class="container">
-        <div class="row">
-            <div class="col-3 offset-4 test">
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
-            </div>
+    <div class="row">
+        <div class="col-3 offset-4 test">
+            {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <input type="submit" value="Edit" />
+            {{ form_end(edit_form) }}
         </div>
+    </div>
 </div>
 {% endblock %}
   {% block stylesheets %}
