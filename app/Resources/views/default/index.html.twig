@@ -33,8 +33,7 @@
 <div class="container-fluid equipe">
     <div class="row">
         {% for equipe in equipes %}
-
-            <div class="col-3 ">
+            <div class="col-2 ">
                 <div class="test">
                     <img style="height: 140px; width: 140px;" src="{{ equipe.imgSymbole }}"><br>
                     <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#{{ equipe.nom }}">{{ equipe.nom }}</button>
@@ -59,11 +58,10 @@
                                         <img class="photoIndiv" style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
                                         <img class="photoIndiv" style="width: 140px; height: 140px;" src="https://www.bloodbowl.com/wp-content/uploads/2016/09/team-profiles-human.jpg">
                                     </div>
-                                    <br>
-                                    <br>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                </div>
 
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    
+                                </div>
 
 
                             </div>
