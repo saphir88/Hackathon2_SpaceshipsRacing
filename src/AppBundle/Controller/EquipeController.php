@@ -26,7 +26,7 @@ class EquipeController extends Controller
 
         $equipes = $em->getRepository('AppBundle:Equipe')->findAll();
 
-        return $this->render('equipe/admin.html.twig', array(
+        return $this->render('equipe/index.html.twig', array(
             'equipes' => $equipes,
         ));
     }

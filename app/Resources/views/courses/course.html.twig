@@ -1,0 +1,298 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Courses</title>
+    </head>
+    <body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h1 class="titre">Star Ship Racing</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 offset-4 ">
+                <a style="color: #12ff00;display:inline-block; "  class="nav-link" href="/">Accueil</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/circuit">Circuits</a>
+                <a style="color: #12ff00;display:inline-block; " class="nav-link" href="/course">Courses</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Courses</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <h1 style="margin-bottom: 50px" class="titre ">Jour 1</h1>
+            </div>
+            <div class="col-3">
+                <h1 style="margin-bottom: 50px" class="titre ">Jour 2</h1>
+            </div>
+            <div class="col-3">
+                <h1 style="margin-bottom: 50px" class="titre ">Jour 3</h1>
+            </div>
+            <div class="col-3">
+                <h1 style="margin-bottom: 50px" class="titre ">Gagnant</h1>
+            </div>
+        </div>
+    </div>
+
+        <!-- Jour 1 -->
+        <div class="row">
+            <div class="col-2">
+                <table class="table table-hover">
+                    <tbody>
+                {% for i,equipe in equipes %}
+                    {% if i < 6 %}
+                    <tr>
+                    <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
+                    <td>{{ equipe.nom }}</td>
+                    </tr>
+                    {% endif%}
+                {% endfor%}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!-- Jour 2 -->
+        <div class="row">
+            <div class="offset-3 col-2">
+                <table class="table table-hover ">
+                    <tbody>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.0.imgSymbole }}"><br></td>
+                                <td>{{ equipes.0.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.4.imgSymbole }}"><br></td>
+                                <td>{{ equipes.4.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                                <td>{{ equipes.5.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.7.imgSymbole }}"><br></td>
+                                <td>{{ equipes.7.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.9.imgSymbole }}"><br></td>
+                                <td>{{ equipes.9.nom }}</td>
+                            </tr>
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipes.11.imgSymbole }}"><br></td>
+                                <td>{{ equipes.11.nom }}</td>
+                            </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!-- Jour 3-->
+            <div class="offset-1 col-2">
+
+                <table id="tablejour3" class="table table-hover ">
+                    <tbody>
+                    <tr>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.0.imgSymbole }}"></td>
+                        <td>{{ equipes.0.nom }}</td>
+                    </tr>
+                    <tr>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                        <td>{{ equipes.5.nom }}</td>
+                    </tr>
+                    <tr>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.7.imgSymbole }}"><br></td>
+                        <td>{{ equipes.7.nom }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <!-- Gagnant-->
+            <div class="offset-1 col-2">
+                <table id="gagnant" class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <td><img style="height: 20px; width: 20px;" src="{{ equipes.5.imgSymbole }}"><br></td>
+                        <td>{{ equipes.5.nom }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- Jour 1 -->
+        <div class="row">
+            <div class="col-2">
+                <table class="table table-hover">
+                    <tbody>
+                     {% for i,equipe in equipes %}
+                        {% if i > 5 %}
+                            <tr>
+                                <td><img style="height: 20px; width: 20px;" src="{{ equipe.imgSymbole }}"><br></td>
+                                <td>{{ equipe.nom }}</td>
+                            </tr>
+                        {% endif%}
+                    {% endfor%}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Résumé de la première course</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <p class="description text-justify">La première course du championnat fut spectaculaire ! La tension est montée jusqu'a son comble à partir du 2nd tour ! En effet, 3 équipes ont faillie être éliminées suite à une collision renversante ! Cependant, grace à l'ingéniosité des différents équipages, ils ont chacun pu terminer la course sans encombres. Comme pour le dernier championnat inter-stellaire, ce sont les Reikland Reavers qui sont arrivé largement en tête !</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Résumé de la seconde course</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <p class="description text-justify">2ème jour du championnat, même gagnants, les Reikland Reavers sont encore arrivés les premiers. Cette course fut déchirante pour l'équipe de l'empire galactique. En effet, c'est dans la dernière ligne droite que, suite aux dommages qu'a reçu l'empire de ses concurrants, leur vaisseau s'est lamentablement déchiré en deux ! Cependant, cet événement dramatique à su réjouir le public ! Il était en délire à ce moment là ! Je pense que l'on continuera à en parler encore longtemps !</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="col-4 offset-4">
+        <h1 style="margin-bottom: 50px" class="titre">Résumé de la dernière course</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <p class="description text-justify">En ce dernier jour, les éléments se sont déchainés sur les participants ! La Nébuleuse d'Akmar a été sans pitié cette fois ci ! La course fut longue et fatiguante pour nos équipes. En effet, ils ne pouvaient plus se fier à leurs instruments de bord. Certains systèmes vitaux furent même désactivé ! La tension est restée pleine jusqu'a la dernière ligne droite. Et les pariticpants ont franchit la ligne d'arrivée dans un interval d'a peine quelques secondes ! Une première pour ce championnat ! <br><br> Le grand gagnant de ce championnat fut la WCS ! La meilleure équipe de toute la galaxie !</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    </body>
+    </html>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 offset-4">
+                    <p class="footer">Site développé par Thomas, Cyril, Ilya et Axel -- <a href="/admin">Admin</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+
+        body{
+            background: url("http://notgoaway.com/wp-content/uploads/2017/07/Space-Wallpaper-6D.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: auto;
+        }
+        .nav-link{
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .titre{
+            font-size: 3em;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: greenyellow;
+            font-family: 'Orbitron', sans-serif;
+        }
+        h1{
+            font-family: 'Orbitron', sans-serif;
+            color: dodgerblue;
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+        }
+        .table-hover
+        {
+
+            border: solid 1px gray;
+            color: dodgerblue;
+
+
+        }
+        .description{
+            font-size: 20px;
+            padding: 15px;
+            color: dodgerblue;
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.7);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        td
+        {
+            border: 1px solid white;
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+        #tablejour3
+        {
+            margin-top: 30%
+
+        }
+        .footer
+        {
+            margin-left: 10%;
+            color: dodgerblue;
+        }
+        #gagnant
+        {
+
+            margin-top: 50%
+        }
+
+        .row
+        {
+            width: 100%;
+        }
+
+        .table{
+            margin-left: 30%;
+        }
+
+
+
+    </style>
+{% endblock %}
