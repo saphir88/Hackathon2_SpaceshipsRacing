@@ -1,5 +1,5 @@
 ## Le projet :
-Création d'un site d'une fédération Internationale de sport collectif (réel ou fictif). Ce site devait permettre aux visiteurs de suivre cet événement sur internet. Nous avons choisi de fair eun site sur une course fictive de vaisseaux spatiaux.
+Création d'un site pour une fédération Internationale de sport collectif (réel ou fictif). Ce site devait permettre aux visiteurs de suivre cet événement sur internet. Nous avons choisi de faire une site sur une course fictive de vaisseaux spatiaux.
 
 ## Le type de projet :
 Second Hackaton de la Wild Code School fait en 29h !
